@@ -25,7 +25,7 @@ sudo apt-get install sublime-text-installer
 
 
 # Set up the .bash_profile
-echo "
+cat > ~/.bash_profile << EOF
 #!/bin/bash
 
 
@@ -134,7 +134,7 @@ function getMyIP() {
 ######################################################################################
 ######################################################################################
 
-" >> ~/.bash_profile
+EOF 
 
 
 # Execute the .bash_profile
