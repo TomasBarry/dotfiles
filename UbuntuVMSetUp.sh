@@ -19,9 +19,9 @@ setxkbmap -layout gb
 
 
 # Download and set up Sublime Text 3
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
+add-apt-repository ppa:webupd8team/sublime-text-3
+apt-get update
+apt-get install sublime-text-installer
 
 
 # Set up the .bash_profile
