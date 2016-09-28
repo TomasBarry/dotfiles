@@ -5,6 +5,10 @@
 # This file can be run after the VM is created
 
 
+# Give root privaleges to barryto
+sudo usermod -a -G sudo barryto
+
+
 # Set the screen scale factor as the Dell XPS 13 has an extremely high resolution
 # resulting in everything being tiny in the VM view
 dconf write /com/ubuntu/user-interface/scale-factor "{'Virtual1': 14}"
