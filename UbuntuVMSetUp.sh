@@ -136,6 +136,3 @@ function getMyIP() {
 
 EOF 
 
-
-# Execute the .bash_profile
-. ~/.bash_profile
