@@ -10,6 +10,10 @@
 dconf write /com/ubuntu/user-interface/scale-factor "{'Virtual1': 14}"
 
 
+# Set the keyboard layout to English UK
+setxkbmap -layout gb
+
+
 # Download and set up Sublime Text 3
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update
