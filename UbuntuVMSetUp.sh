@@ -128,4 +128,4 @@ function getMyIP() {
 
 
 # Execute the .bash_profile
-source ~/.bash_profile
+. ~/.bash_profile
