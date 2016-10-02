@@ -21,4 +21,5 @@ sudo apt-get install sublime-text-installer
 
 
 # Set up the .bash_profile
-mv .bash_profile ~/.bash_profile
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+mv $DIR/.bash_profile ~/.bash_profile
