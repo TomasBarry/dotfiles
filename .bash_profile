@@ -57,7 +57,7 @@ function e() {
 alias bprofile='nano ~/.bash_profile'
 
 # alias for sublime text
-alias sublime='~/opt/sublime_text/sublime_text'
+alias sublime='/opt/sublime_text/sublime_text'
 
 # Make a directory and immediately change into it
 # usage:
