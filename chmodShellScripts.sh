@@ -14,4 +14,15 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Change the mode of all .sh files in the current directory (and
 # in all sub directories to executable
-chmod u+x $DIR/**/*.sh
+echo '##################################################################'
+echo '################## Changing mode of shell scripts ################'
+echo ''
+
+#chmod u+x $DIR/*/*.sh
+cd $DIR
+shellScripts=$(find . -regex '.*/[^/]*.sh')
+chmod u+x $shellScripts
+
+echo ''
+echo '################## Changed mode of shell scripts #################'
+echo '##################################################################'
