@@ -56,7 +56,7 @@ echo '################# Bash set up ############################################
 echo ''
 
 cp $DIR/dotbash_profile ~/.bash_profile
-cp $DIR/dobbash_aliases ~/.bash_aliases
+cp $DIR/dotbash_aliases ~/.bash_aliases
 cp $DIR/dotbashrc ~/.bash_rc
 
 echo ''
