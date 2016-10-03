@@ -12,7 +12,7 @@ echo '###################### Installing Haskell ######################'
 echo ''
 
 sudo apt-get update
-sudo apt-get install haskell-platform
+sudo apt-get install haskell-platform -y
 
 echo ''
 echo '##################### Haskell Installed ########################'
