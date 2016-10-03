@@ -14,7 +14,7 @@ alias c='clear'
 alias l='ls'
 alias u='cd ..'
 alias e='exit'
-
+alias t='gnome-terminal'
 
 # Application aliases
 
