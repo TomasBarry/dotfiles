@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Git aliases
+
+alias gis='git status'
+alias gial='git add -A'
+alias gipsom='git push origin master'
+alias giplom='git pull origin master'
+
+
+# Terminal aliases
+
+alias c='clear'
+alias l='ls'
+alias u='cd ..'
+alias e='exit'
+
+
+# Application aliases
+
+alias sublime='/opt/sublime_text/sublime_text'
+
+
+# File aliases
+
+alias bprofile='nano ~/.bash_profile'
+alias brc='nano ~/.bashrc'
+alias baliases='nano ~/.bash_aliases'

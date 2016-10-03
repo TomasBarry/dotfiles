@@ -75,7 +75,9 @@ echo '################# Bash set up ############################################
 echo ''
 
 changeColour()
-mv $DIR/.bash_profile ~/.bash_profile
+cp $DIR/dotbash_profile ~/.bash_profile
+cp $DIR/dobbash_aliases ~/.bash_aliases
+cp $DIR/dotbashrc ~/.bash_rc
 
 echo ''
 echo '################# Bash is set up #########################################'
