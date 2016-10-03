@@ -1,7 +1,10 @@
 #!/bin/bash
 
+USER=$(whoami)
+
+
 # Update the PATH variable
-export PATH="$PATH:/home/barryto/.local/bin"
+export PATH="$PATH:/home/$USER/.local/bin"
 
 
 # Download and install stack
