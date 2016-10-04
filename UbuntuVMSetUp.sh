@@ -41,9 +41,13 @@ echo '##########################################################################
 echo '################## Installing Sublime Text ###############################'
 echo ''
 
-sudo dpkg -i https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
+URL='https://download.sublimetext.com/sublime-text_build-3126_amd64.deb'
+FILE='sublimetemp.deb'
+wget "$URL" -qO $FILE && sudo dpkg -i $FILE
+rm $FILE
 sudo apt-get install -f
-ln -s $DIR/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+# rm ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+ln -s -f $DIR/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
 echo ''
 echo '################# Sublime Text Installed #################################'
@@ -55,9 +59,9 @@ echo '##########################################################################
 echo '################# Bash set up ############################################'
 echo ''
 
-ln -s $DIR/dotbash_profile ~/.bash_profile
-ln -s $DIR/dotbash_aliases ~/.bash_aliases
-ln -s $DIR/dotbashrc ~/.bash_rc
+ln -s -f $DIR/dotbash_profile ~/.bash_profile
+ln -s -f $DIR/dotbash_aliases ~/.bash_aliases
+ln -s -f $DIR/dotbashrc ~/.bash_rc
 
 echo ''
 echo '################# Bash is set up #########################################'
