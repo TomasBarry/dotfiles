@@ -69,8 +69,16 @@ echo ''
 
 sudo service docker start
 sudo docker run hello-world
-sudo docker info
+sudo service docker stop
 
 echo ''
 echo '################## Docker installed fully #######################'
 echo '#################################################################'
+
+echo '#################################################################'
+echo '################## Create Docker group ##########################'
+echo ''
+
+sudo groupadd docker
+sudo usermod -aG $USER
+gnome-terminal-quit

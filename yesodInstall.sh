@@ -13,3 +13,5 @@ stack build yesod-bin cabal-install --install-ghc
 echo ''
 echo '####### Installed the Yesod command line tools ################'
 echo '###############################################################'
+
+setterm -term linux -fore 'white'

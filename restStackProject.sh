@@ -1,9 +1,10 @@
 #!/bin/bash
 
-stack new my-project servant && cd my-project
+stack new myfirstproject servant && cd myfirstproject
 
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]}" )" && pwd )"
 
+echo '' >> $DIR/stack.yml
 echo 'docker:' >> $DIR/stack.yaml
 echo '   enable: true' >> $DIR/stack.yaml
 
