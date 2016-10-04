@@ -30,4 +30,4 @@ alias baliases='nano ~/.bash_aliases'
 
 
 # Stack aliases
-stack-yesod-dev="stack --docker-run-args='--net=bridge --publish=3000:3000' exec -- yesod devel"
+alias stack-yesod-dev="stack --docker-run-args='--net=bridge --publish=3000:3000' exec -- yesod devel"
