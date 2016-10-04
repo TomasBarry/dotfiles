@@ -1,12 +1,13 @@
 #!/bin/bash
 
-stack new myfirstproject servant && cd myfirstproject
 
-DIR="$( cd "$( dirname "$BASH_SOURCE[0]}" )" && pwd )"
+stack new myfirstproject yesod-sqlite && cd myfirstproject
 
-echo '' >> $DIR/stack.yml
-echo 'docker:' >> $DIR/stack.yaml
-echo '   enable: true' >> $DIR/stack.yaml
+# DIR="$( cd "$( dirname "$BASH_SOURCE[0]}" )" && pwd )"
 
-sudo stack docker pull
-sudo stack build yesod-bin cabal-install --install-ghc
+echo '' >> stack.yaml
+echo 'docker:' >> stack.yaml
+echo '   enable: true' >> stack.yaml
+
+stack docker pull
+stack build yesod-bin cabal-install --install-ghc
