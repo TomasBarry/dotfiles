@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set keyboard layout
+setxkbmap -layout gb
+
 
 # Make a directory and immediately change into it
 # usage:
