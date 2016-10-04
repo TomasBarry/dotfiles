@@ -1,0 +1,80 @@
+# Create a system group
+groupadd -r nameOfGroup
+
+# Create a new system account
+useradd -r -g groupName UserName # -g add to specified group
+
+# Filter for IP address
+ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+
+# Change to root
+sudo su
+
+# Get operating system bit information (32/64)
+getconf LONG_IT
+
+# Restart machine now. Use -h to shutdown machine
+/sbin/shutdown -r now
+
+# Only view part of file
+cat path/to/file
+
+# Define port connection. -a is add, -t is type (mongod_port_t is the type) -p is protocol (udp/tcp), final parameter is the port number
+semanage port -a -t mongod_port_t -p tcd 27017
+
+# Search file for string
+grep "string to find" /path/to/file
+
+# Add user to group. -a for append, -G for groups, -e can be used for expiry time (YYYY-MM-DD)
+sudo usermod -a -G groupname username
+
+# Change ownership of a folder/file
+sudo chown username:groupname objectname
+
+# Start reading file from bottom
+less +G fileName
+
+# Exit root state
+exit
+
+# Find file recursively. . indicates start search from current working directory
+find . -name "name of the file"
+
+# Check kernel version
+uname -r
+
+# Looks for processes matching the name "acroread" and prints out the process ID, among other things.
+ps -el | grep acroread
+
+# Kills a process based on name. "pkill acroread" kills any acrobat reader processes.
+pkill acroread
+
+# List recent commands
+history
+
+# List all commands that match a pattern
+history | grep "java"
+
+# Re-execute a recent command by number
+!123
+
+# Display the CWD
+pwd
+
+# Reports the disk space usage for the file system
+df
+
+# Reports how long the system has been running since last boot
+uptime
+
+# Remove all stopped docker containers
+docker rm $(docker ps -a -q)
+
+# Remove all untagged docker images
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+# Build docker image
+docker build -t <username>/<name-of-container>
+
+# Run docker container
+docker run -it -p <host-port>:<container-port> <username>/<name-of-container>
