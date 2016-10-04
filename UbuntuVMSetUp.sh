@@ -41,9 +41,9 @@ echo '##########################################################################
 echo '################## Installing Sublime Text ###############################'
 echo ''
 
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
+sudo dpkg -i https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
+sudo apt-get install -f
+ln -s $DIR/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
 echo ''
 echo '################# Sublime Text Installed #################################'
@@ -55,9 +55,9 @@ echo '##########################################################################
 echo '################# Bash set up ############################################'
 echo ''
 
-cp $DIR/dotbash_profile ~/.bash_profile
-cp $DIR/dotbash_aliases ~/.bash_aliases
-cp $DIR/dotbashrc ~/.bash_rc
+ln -s $DIR/dotbash_profile ~/.bash_profile
+ln -s $DIR/dotbash_aliases ~/.bash_aliases
+ln -s $DIR/dotbashrc ~/.bash_rc
 
 echo ''
 echo '################# Bash is set up #########################################'
