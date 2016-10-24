@@ -46,7 +46,7 @@ FILE='sublimetemp.deb'
 wget "$URL" -qO $FILE && sudo dpkg -i $FILE
 rm $FILE
 sudo apt-get install -f
-# rm ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+mkdir -p ~/.config/sublime-text-3/Packages/User/
 ln -s -f $DIR/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
 echo ''
