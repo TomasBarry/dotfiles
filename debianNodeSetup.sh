@@ -25,3 +25,36 @@ source /etc/bash_completion.d/docker-machine-wrapper.bash
 
 wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine.bash -P /etc/bash_completion.d/
 source /etc/bash_completion.d/docker-machine.bash 
+
+wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.6.3.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+
+mkdir ~/gowork
+
+echo 'export GOPATH=$HOME/gowork' >> ~/.bashrc
+source ~/.bashrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+source ~/.bashrc
+
+source /etc/profile
+
+go get github.com/tools/godep
+apt-get install bzr -Y
+go get github.com/OpenNebula/docker-machine-opennebula
+cd $GOPATH/src/github.com/OpenNebula/docker-machine-opennebula
+make build
+make install
+
+cd
+mkdir ~/.one
+echo "username:password" > ~/.one/one_auth
+chmod 400 ~/.one/one_auth  
+
+echo 'export ONE_XMLRPC=http://scssnebulamgr.scss.tcd.ie:2633/RPC2' >> ~/.bashrc 
+echo 'export ONE_AUTH=~/.one/one_auth' >> ~/.bashrc  
+source ~/.bashrc
+
+
+
+
