@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt-get install curl -Y
+
 wget -qO- https://get.docker.com/ | sh
 docker version
 
