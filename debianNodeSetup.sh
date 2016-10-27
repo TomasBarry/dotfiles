@@ -19,7 +19,7 @@ docker-machine version
 
 wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-prompt.bash -P /etc/bash_completion.d/
 source /etc/bash_completion.d/docker-machine-prompt.bash 
-echo "PS1='[\u@\h \W$(__docker_machine_ps1 \" [%s]\")]\$ '" >> ~/.bashrc
+echo PS1='[\u@\h \W$(__docker_machine_ps1 " [%s]")]\$ ' >> ~/.bashrc
 
 wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-wrapper.bash -P /etc/bash_completion.d/
 source /etc/bash_completion.d/docker-machine-wrapper.bash 
