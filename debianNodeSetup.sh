@@ -15,6 +15,7 @@ apt-get install curl -y
 #docker run hello-world
 
 curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-` uname -m` >          /usr/local/bin/docker-machine && chmod +x /usr/local/bin/docker-machine
+docker-machine version
 
 wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-prompt.bash -P /etc/bash_completion.d/
 source /etc/bash_completion.d/docker-machine-prompt.bash 
