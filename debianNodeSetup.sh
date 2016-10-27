@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install curl -Y
+apt-get install curl -y
 
 wget -qO- https://get.docker.com/ | sh
 docker version
@@ -40,7 +40,7 @@ source ~/.bashrc
 source /etc/profile
 
 go get github.com/tools/godep
-apt-get install bzr -Y
+apt-get install bzr -y
 go get github.com/OpenNebula/docker-machine-opennebula
 cd $GOPATH/src/github.com/OpenNebula/docker-machine-opennebula
 make build
